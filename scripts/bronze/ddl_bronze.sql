@@ -13,11 +13,7 @@ Script Purpose:
 	USE DataWareHouse;
 	DROP TABLE IF EXISTS bronze.crm_cust_info,bronze.crm_prd_info,bronze.crm_sales_details,
 	bronze.erp_cust_az12,bronze.erp_loc_a101,bronze.erp_px_cat_g1v2
-
-	DROP TABLE IF EXISTS bronze.crm_cust_info,crm_prd_info,crm_sales_details,
-	erp_cust_az12,erp_loc_a101,erp_px_cat_g1v2
-
-
+GO
 	--CRM 
 	CREATE TABLE bronze.crm_cust_info (
 	cst_id INT,
@@ -28,7 +24,8 @@ Script Purpose:
 	cst_gndr NVARCHAR(50),
 	cst_create_date DATE
 	)
-
+GO
+		
 	CREATE TABLE bronze.crm_prd_info (
 	prd_id INT,
 	prd_key	NVARCHAR(50),
@@ -38,7 +35,7 @@ Script Purpose:
 	prd_start_dt DATETIME,	
 	prd_end_dt DATETIME,
 	)
-
+GO
 	CREATE TABLE bronze.crm_sales_details (
 	sls_ord_num	NVARCHAR(50),
 	sls_prd_key	NVARCHAR(50),
@@ -51,7 +48,7 @@ Script Purpose:
 	sls_price INT
 	)
 
-
+GO
 	--ERP
 	CREATE TABLE bronze.erp_cust_az12
 	(
@@ -59,13 +56,13 @@ Script Purpose:
 	BDATE date,	
 	GEN NVARCHAR(50)
 	)
-
+GO
 	CREATE TABLE bronze.erp_loc_a101
 	(
 	CID	NVARCHAR(50),
 	CNTRY NVARCHAR(50)
 	)
-
+GO
 	CREATE TABLE bronze.erp_px_cat_g1v2
 	(
 	ID	NVARCHAR(50),
@@ -73,4 +70,4 @@ Script Purpose:
 	SUBCAT	NVARCHAR(50),
 	MAINTENANCE NVARCHAR(50)
 	)
-
+GO
